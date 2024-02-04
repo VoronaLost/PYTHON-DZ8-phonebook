@@ -171,7 +171,7 @@ def change_record():
             if field_index in range(1, 5):
                 mod_record = change_list[index].split("~")
                 mod_record[field_index - 1] = input(f"Введите новую графу '{list1[field_index - 1]}' для текущей записи: ")
-                change_list[index] = "~".join(mod_record)
+                change_list[index] = "~".join(mod_record) + "\n"
             elif field_index == 5:
                 change_list[index] = "~".join(list(map(lambda x: list_input(x), list1))) + "\n"
             if field_index != 6:
